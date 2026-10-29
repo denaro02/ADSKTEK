@@ -1,18 +1,9 @@
+
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "buildCommand": "npm run vercel-build",
   "outputDirectory": "public",
-  "functions": {
-    "api/app.ts": {
-      "maxDuration": 60,
-      "includeFiles": "app/**"
-    },
-    "api/cron.ts": {
-      "maxDuration": 60,
-      "includeFiles": "app/**"
-    }
-  },
   "rewrites": [
     {
       "source": "/",
