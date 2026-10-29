@@ -1,0 +1,24 @@
+{
+  "name": "adstek",
+  "version": "2.0.0",
+  "private": true,
+  "description": "ADSTEK: central de anúncios do Meta para a equipe (Node.js + TypeScript)",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22.5"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/src/servidor.js",
+    "dev": "tsc -p tsconfig.json && node dist/src/servidor.js",
+    "vercel-build": "echo \"A Vercel compila as funções de api/ sozinha.\""
+  },
+  "dependencies": {
+    "mysql2": "^3.11.5",
+    "tweetnacl": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}

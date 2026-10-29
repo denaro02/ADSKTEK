@@ -1,0 +1,12 @@
+# nunca vão para o GitHub
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite-*
+app/an01.json
+config.php
+node_modules/
+dist/
+.vercel/
+.DS_Store

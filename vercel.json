@@ -1,0 +1,48 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "npm run vercel-build",
+  "outputDirectory": "public",
+  "functions": {
+    "api/app.ts": {
+      "maxDuration": 60,
+      "includeFiles": "app/**"
+    },
+    "api/cron.ts": {
+      "maxDuration": 60,
+      "includeFiles": "app/**"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/app?__r=pagina"
+    },
+    {
+      "source": "/index.php",
+      "destination": "/api/app?__r=pagina"
+    },
+    {
+      "source": "/api.php",
+      "destination": "/api/app?__r=api"
+    },
+    {
+      "source": "/integracao.php",
+      "destination": "/api/app?__r=integracao"
+    },
+    {
+      "source": "/instalar.php",
+      "destination": "/api/app?__r=instalar"
+    },
+    {
+      "source": "/cron",
+      "destination": "/api/cron"
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron",
+      "schedule": "17 11 * * *"
+    }
+  ]
+}
